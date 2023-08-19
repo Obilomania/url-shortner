@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import FooterSection from "./component/FooterSection";
+import Landing from "./component/Landing";
+import { BrowserRouter } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="w-full py-10">
+        <h1 className="text-center  text-primary text-4xl uppercase font-semibold ">
+          SpLink URL Shortner
+        </h1>
+        <Landing />
+        <FooterSection />
+      </div>
+    </BrowserRouter>
   );
 }
 
